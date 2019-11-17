@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "998583169185",
+    "firebase_url": "https://thesecretchat-6388c.firebaseio.com",
+    "project_id": "thesecretchat-6388c",
+    "storage_bucket": "thesecretchat-6388c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998583169185:android:a21c8e0e972bd891bcc0e0",
+        "android_client_info": {
+          "package_name": "co.FilipeGomes.theSecretChat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998583169185-j6e6ms3v3ivbr7uvruj47gigki310b8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTt-3oZtUbmGdKYZaUfRraJabtoCn_YDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998583169185-j6e6ms3v3ivbr7uvruj47gigki310b8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
