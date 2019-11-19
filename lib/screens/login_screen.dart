@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -31,40 +31,44 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 100.0,
-                  child: Image.asset('images/logo.png'),
+              Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('images/logo.png'),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 15.0,
               ),
               TextField(
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   keyboardType: TextInputType.emailAddress,
                   textAlign: TextAlign.center,
                   onChanged: (value) {
                   email = value;
                 },
-                decoration: kTextFieldDecoration.copyWith(hintText: 'Enter your Email')
+                decoration: kTextFieldDecoration.copyWith(hintText: 'Email')
               ),
               SizedBox(
-                height: 8.0,
+                height: 15.0,
               ),
               TextField(
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   obscureText: true,
                   textAlign: TextAlign.center,
                   onChanged: (value) {
                   password = value;
                 },
-                decoration: kTextFieldDecoration.copyWith(hintText: 'Enter your Password')
+                decoration: kTextFieldDecoration.copyWith(hintText: 'Password')
               ),
               SizedBox(
-                height: 22.0,
+                height: 15.0,
               ),
               RoundedButton(
-                title: 'Log In',
+                title: 'Login',
                 colour: Colors.lightBlueAccent,
                 onPressed: () async {
                   setState(() {

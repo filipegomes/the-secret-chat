@@ -26,7 +26,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this,);
     animation =
-        ColorTween(begin: Colors.grey, end: Colors.white).animate(controller);
+        ColorTween(begin: Colors.grey, end: Colors.black).animate(controller);
     controller.forward();
     controller.addListener(() {
       setState(() {});
@@ -62,6 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 TypewriterAnimatedTextKit(
                   text: ['theSecretChat'],
                   textStyle: TextStyle(
+                    color: Colors.white,
                     fontSize: 40.0,
 
                     fontWeight: FontWeight.w900,
@@ -76,7 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
 
             RoundedButton(
-              title: 'Log In',
+              title: 'Login',
               colour: Colors.lightBlueAccent,
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
