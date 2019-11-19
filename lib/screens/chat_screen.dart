@@ -1,7 +1,7 @@
-import 'package:flash_chat/screens/login_screen.dart';
-import 'package:flash_chat/screens/welcome_screen.dart';
+import 'package:theSecretChat/screens/login_screen.dart';
+import 'package:theSecretChat/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flash_chat/constants.dart';
+import 'package:theSecretChat/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
