@@ -4,7 +4,7 @@ import 'package:theSecretChat/components/rounded_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'chat_screen.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
@@ -86,8 +86,41 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       showSpinner = false;
                     });
                   }
-                  catch (e){
+                  catch (e) {
                     print(e);
+                    print(e.message);
+                    if (e.message == null) {
+                      showSpinner = false;
+                      Alert(context: context,
+                          title: "YOU MISSED SOMETHING!",
+                          desc: "Email and Password must to be filled!",
+                          type: AlertType.error,
+                          buttons: [
+                            DialogButton(
+                              child: Text(
+                                "OK",
+                                style: TextStyle(color: Colors.white, fontSize: 20),),
+                              onPressed: () => Navigator.pop(context),
+                              width: 120,)]).show();
+                    }
+                    else {
+                      Alert(context: context,
+                          title: "SOMETHING IS WRONG!",
+                          desc: e.message,
+                          type: AlertType.error,
+                          buttons: [
+                            DialogButton(
+                              child: Text(
+                                "OK",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),),
+                              onPressed: () => Navigator.pop(context),
+                              width: 120,)
+                          ]).show();
+                      setState(() {
+                        showSpinner = false;
+                      });
+                    }
                   }
 
                 },
